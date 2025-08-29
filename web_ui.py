@@ -2,8 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-username = '17392853128'
-passward = 'XRTPXX324'
+username = 'xxxx'
+passward = 'xxxx'
 
 def edge_driver(username,passward):
     bili = webdriver.Edge()
