@@ -1,28 +1,18 @@
-str = '123456789'
 
-print(str)  # 输出字符串
-print(str[0:-1])  # 输出第一个到倒数第二个的所有字符
-print(str[0])  # 输出字符串第一个字符
-print(str[2:5])  # 输出从第三个开始到第六个的字符（不包含）
-print(str[2:])  # 输出从第三个开始后的所有字符
-print(str[1:5:2])  # 输出从第二个开始到第五个且每隔一个的字符（步长为2）
-print(str * 2)  # 输出字符串两次
-print(str + '你好')  # 连接字符串
 
-print('------------------------------')
+def Words(input_srt):
 
-print('hello\nrunoob')  # 使用反斜杠(\)+n转义特殊字符
-print(r'hello\nrunoob')  # 在字符串前面添加一个 r，表示原始字符串，不会发生转义
-
-x = "a"
-y = "b"
-# 换行输出
-print(x)
-print(y)
-
-print('---------')
-# 不换行输出
-print(x, end=" ")
-print(y, end=" ")
-
-print('--------------数组内容翻转重组----------------------')
+    #使用[split]方法,将数组以指定关键字进行分割，当数组内存在此关键字时，将关键字转化为逗号【,】将数组分割为不同字符串
+    print("分割前："+input_srt)
+    work_list = input_srt.split(" ")
+    print("分割后：",work_list)
+    #翻转
+    fanzhuan_list = work_list[-1::-1]
+    #重组
+    chongzu_list = " ".join(fanzhuan_list)
+    print('重组后:',chongzu_list)
+    return chongzu_list
+if __name__=="__main__":
+    input_srt = '超级 星期 五'
+    rw = Words(input_srt)
+    print('最后结果输出：',rw)
